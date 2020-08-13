@@ -2,11 +2,28 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+#n^2 solution
+
 def product_of_all_other_numbers(arr):
     # Your code here
+    products = [1] * len(arr)
 
-    pass
+    for index in range(len(arr)):
+        for i in range(len(arr)):
+            if i != index:
+                products[i] *= arr[index]
+    
+    return products
+'''
+def product_of_all_other_numbers(arr):
+    products = [1] * len(arr)
+    product = 1
 
+    for index in range(len(arr)):
+        
+    
+    return products
+'''
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
